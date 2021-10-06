@@ -16,7 +16,7 @@ mongoose.connection.on('error', err => console.log(`DB connection error: ${err.m
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(expressValidator())
-// app.use('/', boardgamesRoutes)
+app.use('/', boardgamesRoutes)
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {console.log(`listening on ${port}`)})
