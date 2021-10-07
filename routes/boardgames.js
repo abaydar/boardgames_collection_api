@@ -5,6 +5,6 @@ const { createBoardgameValidator } = require('../validators')
 const router = express.Router()
 
 router.get('/', getBoardgames)
-router.post('/boardgames', createBoardgame)
+router.post('/boardgames', createBoardgameValidator, createBoardgame)
 
 module.exports = router
