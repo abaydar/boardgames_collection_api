@@ -3,7 +3,7 @@ const Boardgame = require('../models/boardgame')
 exports.getBoardgames = (req, res) => {
     const boardgames = Boardgame.find().select("_id name yearPublished image minPlayers maxPlayers playingTime")
     .then((boardgames) => {
-        res.json({ boardgames })
+        res.json(boardgames)
     })
     .catch(err => console.log(err))
 }
